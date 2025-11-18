@@ -1,0 +1,287 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.55);
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: var(--color-bg);
+  border-radius: 8px;
+  width: min(1120px, 95vw);
+  height: min(680px, 90vh);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 35px 80px rgba(15, 23, 42, 0.25);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+.headerRow {
+  padding: 1rem 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.titleGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.savedSearchButton {
+  border-radius: 6px;
+  background-color: #f3f4f6;
+  padding: 0.3rem 0.75rem;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gray-500);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.metaRow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10rem;
+  align-items: end;
+  flex-wrap: wrap;
+}
+
+.helperText {
+  margin: 0;
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--color-text);
+}
+
+.metaRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+}
+
+.limitBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 16px;
+  background-color: #fbecdd;
+  color: #d9730e;
+  padding: 4px 12px 4px 10px;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.limitBadge svg {
+  color: #d9730e;
+}
+
+.unlockCopy {
+  color: #cb912e;
+  font-weight: 700;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  border: none;
+  background: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  color: var(--gray-500);
+}
+
+.body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+}
+
+.filterColumn {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.filterPrimaryLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.searchInputWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  border-radius: 0;
+  padding: 0.65rem 0;
+  color: var(--gray-500);
+}
+
+.searchInputWrapper input {
+  border: none;
+  outline: none;
+  flex: 1;
+  background: none;
+  font-size: 0.9rem;
+}
+
+.divider {
+  height: 1px;
+  background-color: rgba(15, 23, 42, 0.08);
+}
+
+.filterList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  flex: 1;
+}
+
+.filterItem {
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.filterHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  font-weight: 600;
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.filterHeaderLeft {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.filterPlaceholder {
+  margin: 0.35rem 0 0;
+  color: var(--gray-500);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.filterActions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.modalButton {
+  flex: 1;
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+.modalButton.ghost {
+  border-color: rgba(15, 23, 42, 0.15);
+  background-color: #fff;
+  color: var(--gray-500);
+}
+
+.modalButton.primary {
+  background-color: var(--gray-800);
+  color: #fff;
+}
+
+.resultsColumn {
+
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.resultsHeader {
+  padding-bottom: 0.75rem;
+  background-color: var(--color-surface);
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.resultsLabels {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.75rem;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--gray-500);
+}
+
+.emptyState {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.35rem;
+  color: var(--gray-500);
+}
+
+.emptyTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0.5rem 0 0;
+}
+
+.emptySubtitle,
+.emptyFooter {
+  margin: 0;
+}
+
+.emptyOr {
+  margin: 0.25rem 0;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+@media (max-width: 960px) {
+  .body {
+    grid-template-columns: 1fr;
+  }
+
+  .filterColumn {
+    border-right: none;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  }
+}
