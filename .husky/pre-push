@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+
+# validation step before pushing 
+echo "🔍 Running pre-push validation..."
+
+# checking for build errors
+echo " Building project..."
+npm run build
+
+if [ $? -ne 0 ]; then
+  echo "❌ Build failed! Push aborted."
+  exit 1
+fi
+
+echo " Build successful! Proceeding with push..."

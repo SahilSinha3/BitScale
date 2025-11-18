@@ -1,0 +1,226 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1.5rem 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+  background-color: #ffffff;
+  color: #475467;
+  min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: var(--sidebar-width);
+    border-bottom: none;
+    border-right: 1px solid var(--color-border);
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.brandMark {
+  height: 42px;
+  width: 42px;
+  border-radius: 16px;
+  background-color: #0f172a;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.brandInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandName {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.brandTagline {
+  font-size: 0.78rem;
+  color: #94a3b8;
+}
+
+.workspaceCard {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  padding: 0.85rem 1rem;
+}
+
+.workspaceInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.workspaceAvatar {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  background: linear-gradient(130deg, #3b82f6, #a855f7);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.workspaceName {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.workspaceMeta {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.chevron {
+  color: #cbd5f5;
+}
+
+.sections {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sectionTitle {
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  color: #cbd5f5;
+}
+
+.navList {
+  margin-top: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.navButton {
+  width: 100%;
+  border-radius: 18px;
+  padding: 0.55rem 0.75rem;
+  font-weight: 600;
+  color: #475467;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navButtonContent {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.navIcon {
+  height: 18px;
+  width: 18px;
+  color: inherit;
+}
+
+.active {
+  background-color: #edf2ff;
+  color: #2563eb;
+}
+
+.navButton:not(.active):hover {
+  background-color: #f1f5f9;
+}
+
+.badge {
+  border-radius: 999px;
+  padding: 0.15rem 0.7rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.supportCard {
+  margin-top: auto;
+  border: 1px dashed var(--color-border);
+  border-radius: 22px;
+  background-color: var(--color-surface);
+  padding: 1.25rem;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.supportDescription {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: #94a3b8;
+}
+
+@media (prefers-color-scheme: dark) {
+  .container {
+    background-color: #030712;
+    border-color: #1f2937;
+    color: #e2e8f0;
+  }
+
+  .brandMark {
+    background-color: #e2e8f0;
+    color: #0f172a;
+  }
+
+  .brandName {
+    color: #f8fafc;
+  }
+
+  .workspaceCard {
+    border-color: rgba(148, 163, 184, 0.25);
+  }
+
+  .workspaceName {
+    color: #e2e8f0;
+  }
+
+  .navButton:not(.active) {
+    color: #cbd5f5;
+  }
+
+  .navButton:not(.active):hover {
+    background-color: rgba(148, 163, 184, 0.1);
+  }
+
+  .active {
+    background-color: rgba(59, 130, 246, 0.12);
+    color: #c3daff;
+  }
+
+  .supportCard {
+    background-color: rgba(15, 23, 42, 0.5);
+    border-color: rgba(148, 163, 184, 0.4);
+  }
+
+  .supportDescription {
+    color: #a3b4d5;
+  }
+}

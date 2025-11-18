@@ -1,0 +1,101 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+  min-height: var(--header-height);
+}
+
+.usage {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.usageLabel {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.usageValue {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+.boosterButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 999px;
+  border: 1px solid #dbeafe;
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  padding: 0.45rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.boosterButton:hover {
+  background-color: #dbeafe;
+  border-color: #bfdbfe;
+}
+
+.userAvatar {
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+  color: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  .usageValue {
+    color: #f8fafc;
+  }
+
+  .usageLabel {
+    color: #cbd5f5;
+  }
+
+  .boosterButton {
+    border-color: rgba(59, 130, 246, 0.35);
+    background: rgba(59, 130, 246, 0.15);
+    color: #c3daff;
+  }
+
+  .boosterButton:hover {
+    background: rgba(59, 130, 246, 0.25);
+  }
+
+  .userAvatar {
+    background-color: rgba(15, 23, 42, 0.6);
+    border-color: rgba(148, 163, 184, 0.4);
+  }
+}
