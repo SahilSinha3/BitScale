@@ -46,20 +46,76 @@
         "name": "Workbook - Testing design ideas for grid and workbook",
         "icon": "Notebook",
         "editedBy": "Sam Taylor",
+        "editorAvatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=80&q=80",
         "lastEdited": "06 Aug, 2025",
         "badges": ["workflow"],
         "expandable": true,
         "starred": true
       },
-      { "name": "LinkedIn", "icon": "Linkedin", "editedBy": "Chris Parker", "lastEdited": "06 Aug, 2025", "starred": true },
-      { "name": "Sales nav", "icon": "Compass", "editedBy": "Jone Doe", "lastEdited": "06 Aug, 2025" },
-      { "name": "Find company", "icon": "Building2", "editedBy": "Alex Morgan", "lastEdited": "06 Aug, 2025" },
-      { "name": "Import CSV", "icon": "FileSpreadsheet", "editedBy": "Drew Wilson", "lastEdited": "06 Aug, 2025" },
-      { "name": "Find people", "icon": "Users", "editedBy": "Jone Doe", "lastEdited": "06 Aug, 2025" },
-      { "name": "Google Maps", "icon": "MapPin", "editedBy": "Jone Doe", "lastEdited": "06 Aug, 2025" },
-      { "name": "Google search results", "icon": "Search", "editedBy": "Jone Doe", "lastEdited": "06 Aug, 2025" },
-      { "name": "Factors", "icon": "Figma", "editedBy": "Jone Doe", "lastEdited": "06 Aug, 2025" },
-      { "name": "Hubspot List - 10 (05 Aug 25)", "icon": "ListChecks", "editedBy": "Jone Doe", "lastEdited": "06 Aug, 2025" }
+      {
+        "name": "LinkedIn",
+        "icon": "Linkedin",
+        "editedBy": "Chris Parker",
+        "editorAvatar": "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=80&q=80",
+        "lastEdited": "06 Aug, 2025",
+        "starred": true
+      },
+      {
+        "name": "Sales nav",
+        "icon": "Compass",
+        "editedBy": "Jone Doe",
+        "editorAvatar": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=80&q=80",
+        "lastEdited": "06 Aug, 2025"
+      },
+      {
+        "name": "Find company",
+        "icon": "Building2",
+        "editedBy": "Alex Morgan",
+        "editorAvatar": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=80&q=80",
+        "lastEdited": "06 Aug, 2025"
+      },
+      {
+        "name": "Import CSV",
+        "icon": "FileSpreadsheet",
+        "editedBy": "Drew Wilson",
+        "editorAvatar": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=80&q=80",
+        "lastEdited": "06 Aug, 2025"
+      },
+      {
+        "name": "Find people",
+        "icon": "Users",
+        "editedBy": "Jone Doe",
+        "editorAvatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=80&q=80",
+        "lastEdited": "06 Aug, 2025"
+      },
+      {
+        "name": "Google Maps",
+        "icon": "MapPin",
+        "editedBy": "Jone Doe",
+        "editorAvatar": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=80&q=80",
+        "lastEdited": "06 Aug, 2025"
+      },
+      {
+        "name": "Google search results",
+        "icon": "Search",
+        "editedBy": "Jone Doe",
+        "editorAvatar": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=80&q=80",
+        "lastEdited": "06 Aug, 2025"
+      },
+      {
+        "name": "Factors",
+        "icon": "Figma",
+        "editedBy": "Jone Doe",
+        "editorAvatar": "https://images.unsplash.com/photo-1521572171376-1f0d7c19737d?auto=format&fit=crop&w=80&q=80",
+        "lastEdited": "06 Aug, 2025"
+      },
+      {
+        "name": "Hubspot List - 10 (05 Aug 25)",
+        "icon": "ListChecks",
+        "editedBy": "Jone Doe",
+        "editorAvatar": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=80&q=80",
+        "lastEdited": "06 Aug, 2025"
+      }
     ]
   }
 }

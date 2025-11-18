@@ -58,8 +58,9 @@ export function FindPeopleModal({ open, onClose }: FindPeopleModalProps) {
               <div className={styles.titleGroup}>
                 <h2 className={styles.title}>{data.title}</h2>
                 <button type="button" className={styles.savedSearchButton}>
-                  <ChevronDown size={14} />
+                  <Bookmark size={14} />
                   {data.savedSearchLabel}
+                  <ChevronDown size={14} />
                 </button>
               </div>
             </div>

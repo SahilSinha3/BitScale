@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   Building2,
   ChevronDown,
@@ -21,6 +22,7 @@ type TableRow = {
   name: string;
   icon: string;
   editedBy: string;
+  editorAvatar?: string;
   lastEdited: string;
   badges?: string[];
   expandable?: boolean;
@@ -72,14 +74,16 @@ export function GridTable({ rows }: GridTableProps) {
                 <td>
                   <div className={styles.nameCell}>
                     {row.expandable && <ChevronDown className={styles.expandIcon} size={16} />}
+                    {row.starred ? (
+                      <Star className={styles.rowStar} size={14} color="#facc15" fill="#facc15" />
+                    ) : (
+                      <span className={styles.rowStarPlaceholder} />
+                    )}
                     <div className={styles.iconPill}>
                       <Icon size={16} />
                     </div>
                     <div>
-                      <div className={styles.rowTitle}>
-                        {row.starred && <Star size={14} color="#facc15" fill="#facc15" />}{" "}
-                        {row.name}
-                      </div>
+                      <div className={styles.rowTitle}>{row.name}</div>
                       {row.badges && (
                         <div className={styles.badgeGroup}>
                           {row.badges.map((badge) => (
@@ -94,7 +98,17 @@ export function GridTable({ rows }: GridTableProps) {
                 </td>
                 <td>
                   <div className={styles.editorCell}>
-                    <div className={styles.avatarBubble}>{getInitials(row.editedBy)}</div>
+                    {row.editorAvatar ? (
+                      <Image
+                        src={row.editorAvatar}
+                        alt={row.editedBy}
+                        width={32}
+                        height={32}
+                        className={styles.avatarImageThumb}
+                      />
+                    ) : (
+                      <div className={styles.avatarBubble}>{getInitials(row.editedBy)}</div>
+                    )}
                     {row.editedBy}
                   </div>
                 </td>
