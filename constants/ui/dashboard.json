@@ -15,7 +15,12 @@
     "meta": "Posted today",
     "media": {
       "thumbnail": "/window.svg",
-      "duration": "04:02"
+      "duration": "04:02",
+      "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    },
+    "carousel": {
+      "total": 4,
+      "activeIndex": 0
     }
   },
   "progressCard": {
@@ -24,10 +29,10 @@
     "progressLabel": "Overall progress",
     "progressValue": 75,
     "steps": [
-      "Create your data list",
-      "Connect an integration",
-      "Learn about BitAgent",
-      "Customise waterfall providers"
+      { "label": "Create your data list", "completed": true },
+      { "label": "Connect an integration", "completed": true },
+      { "label": "Learn about BitAgent", "completed": true },
+      { "label": "Customise waterfall providers", "completed": false }
     ]
   },
   "tabs": [

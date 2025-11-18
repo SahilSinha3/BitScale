@@ -5,7 +5,7 @@ import { ThemeSwitch } from "./ThemeSwitch";
 import headerData from "@/constants/components/header.json";
 import styles from "@/styles/components/layout/Header.module.css";
 
-const { usage, boosterLabel, usageLabel, avatar } = headerData;
+const { usage, boosterLabel, avatar } = headerData;
 
 export function Header() {
   return (

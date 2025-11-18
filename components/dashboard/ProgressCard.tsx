@@ -1,4 +1,4 @@
-import { CheckCircle2 } from "lucide-react";
+import { Check } from "lucide-react";
 
 import styles from "@/styles/ui/Dashboard.module.css";
 
@@ -7,7 +7,10 @@ type ProgressCardData = {
   subtitle: string;
   progressLabel: string;
   progressValue: number;
-  steps: string[];
+  steps: {
+    label: string;
+    completed: boolean;
+  }[];
 };
 
 type ProgressCardProps = {
@@ -30,12 +33,19 @@ export function ProgressCard({ data }: ProgressCardProps) {
         <div className={styles.progressFill} style={{ width: `${data.progressValue}%` }} />
       </div>
       <ul className={styles.progressList}>
-        {data.steps.map((step) => (
-          <li key={step} className={styles.progressItem}>
-            <CheckCircle2 size={18} color="#22c55e" />
-            {step}
-          </li>
-        ))}
+        {data.steps.map((step) => {
+          const iconState = step.completed
+            ? styles.progressIconComplete
+            : styles.progressIconPending;
+          return (
+            <li key={step.label} className={styles.progressItem}>
+              <span className={`${styles.progressIcon} ${iconState}`}>
+                {step.completed ? <Check size={16} strokeWidth={3} /> : null}
+              </span>
+              <span>{step.label}</span>
+            </li>
+          );
+        })}
       </ul>
     </article>
   );

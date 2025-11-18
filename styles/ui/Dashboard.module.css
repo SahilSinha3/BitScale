@@ -86,7 +86,7 @@
   line-height: 17.14px;
   border-width: 1.02px;
 }
-
+/* card section */
 .cardsRow {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
@@ -98,15 +98,27 @@
     grid-template-columns: 1fr;
   }
 }
-
+/* latest media card */
 .latestCard {
   background-color: #e7f3f880;
-  border-radius: 24px;
+  border-radius: 8px;
   padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 162px;
+}
+
+.latestCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.latestContent {
   display: flex;
   gap: 1rem;
   align-items: center;
-  min-height: 180px;
 }
 
 .latestMedia {
@@ -171,13 +183,33 @@
   color: #94a3b8;
 }
 
+.carouselIndicators {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.carouselDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background-color: rgba(31, 85, 145, 0.3);
+  transition: width 0.25s ease, background-color 0.25s ease;
+}
+
+.carouselDotActive {
+  width: 30px;
+  background-color: #1f5591;
+}
+
 .progressCard {
   background-color: #e7f3f880;
-  border-radius: 24px;
+  border-radius: 8px;
   padding: 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
+  min-height: 162px;
 }
 
 .progressHeader {
@@ -188,14 +220,15 @@
 }
 
 .progressTitle {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #1f2a37;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
 }
 
 .progressSubtitle {
   margin: 0.2rem 0 0;
-  font-size: 0.85rem;
+  font-size: 12px;
+  font-weight: 400;
   color: #475467;
 }
 
@@ -229,17 +262,44 @@
 .progressList {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0.5rem 0 0;
   display: grid;
-  gap: 0.4rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem 1rem;
 }
 
 .progressItem {
   display: flex;
   align-items: center;
   gap: 0.45rem;
-  font-size: 0.85rem;
-  color: #1f2a37;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.progressIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  background-color: #fff;
+  color: inherit;
+}
+
+.progressIconComplete {
+  border-color: #1f9d60;
+  background-color: #e0f6ea;
+  color: #1f9d60;
+  width: 18px;
+  height: 18px;
+}
+
+.progressIconPending {
+  border-color: #d1d5db;
+  color: #9ca3af;
 }
 
 .tabsRow {
