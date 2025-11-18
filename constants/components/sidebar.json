@@ -1,0 +1,55 @@
+{
+  "brand": {
+    "name": "Bitscale",
+    "tagline": "GTM Super App",
+    "mark": "B"
+  },
+  "workspace": {
+    "name": "GTM Spaces",
+    "subtitle": "Workspace",
+    "avatar": "https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?auto=format&fit=crop&w=120&q=80"
+  },
+  "sections": [
+    {
+      "title": "Home",
+      "items": [
+        {
+          "label": "My Dashboard",
+          "icon": "LayoutDashboard",
+          "route": "/",
+          "isHighlighted": true
+        },
+        {
+          "label": "Playbooks",
+          "icon": "Rocket",
+          "route": "/playbooks",
+          "badge": "Soon"
+        },
+        {
+          "label": "Integrations",
+          "icon": "Boxes",
+          "route": "/integrations"
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "items": [
+        {
+          "label": "Documentation",
+          "icon": "BookOpenCheck",
+          "route": "/documentation"
+        },
+        {
+          "label": "Settings",
+          "icon": "Settings",
+          "route": "/settings"
+        }
+      ]
+    }
+  ],
+  "support": {
+    "title": "Get Support",
+    "subtitle": "Reach out to the Bitscale team"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "welcome": {
+    "title": "Welcome back, Tim!",
+    "subtitle": "Here's your daily scoop on Bitscale!"
+  },
+  "actionButtons": [
+    { "label": "Find Companies", "variant": "outline" },
+    { "label": "Find People", "variant": "outline" },
+    { "label": "New Grid", "variant": "primary", "icon": "Plus" }
+  ],
+  "cards": [
+    {
+      "type": "content",
+      "title": "Latest from Bitscale",
+      "heading": "How to Integrate 2 Way HubSpot",
+      "description": "Prerequisites for this Integration is that you should have a Hubspot account and copy the API key. We simple add our API key through the integrations panel.",
+      "meta": "Posted today",
+      "stats": {
+        "label": "Watch tutorial",
+        "duration": "4 min"
+      }
+    },
+    {
+      "type": "progress",
+      "title": "Complete product demo",
+      "subtitle": "92% of users nailed BitScale after this walkthrough",
+      "progress": 75,
+      "items": [
+        "Create your data list",
+        "Connect an integration",
+        "Learn about BitAgent",
+        "Customise waterfall providers"
+      ]
+    }
+  ],
+  "tabs": [
+    { "label": "My Grids", "key": "my" },
+    { "label": "Starred", "key": "starred" }
+  ],
+  "table": {
+    "searchPlaceholder": "Search grids and workbooks...",
+    "rows": [
+      {
+        "name": "Workbook - Testing design ideas for grid and workbook",
+        "icon": "Notebook",
+        "editedBy": "Sam Taylor",
+        "lastEdited": "06 Aug, 2025",
+        "badges": ["workflow"],
+        "expandable": true,
+        "starred": true
+      },
+      { "name": "LinkedIn", "icon": "Linkedin", "editedBy": "Chris Parker", "lastEdited": "06 Aug, 2025", "starred": true },
+      { "name": "Sales nav", "icon": "Compass", "editedBy": "Jone Doe", "lastEdited": "06 Aug, 2025" },
+      { "name": "Find company", "icon": "Building2", "editedBy": "Alex Morgan", "lastEdited": "06 Aug, 2025" },
+      { "name": "Import CSV", "icon": "FileSpreadsheet", "editedBy": "Drew Wilson", "lastEdited": "06 Aug, 2025" },
+      { "name": "Find people", "icon": "Users", "editedBy": "Jone Doe", "lastEdited": "06 Aug, 2025" },
+      { "name": "Google Maps", "icon": "MapPin", "editedBy": "Jone Doe", "lastEdited": "06 Aug, 2025" },
+      { "name": "Google search results", "icon": "Search", "editedBy": "Jone Doe", "lastEdited": "06 Aug, 2025" },
+      { "name": "Factors", "icon": "Figma", "editedBy": "Jone Doe", "lastEdited": "06 Aug, 2025" },
+      { "name": "Hubspot List - 10 (05 Aug 25)", "icon": "ListChecks", "editedBy": "Jone Doe", "lastEdited": "06 Aug, 2025" }
+    ]
+  }
+}
