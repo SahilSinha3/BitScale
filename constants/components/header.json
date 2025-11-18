@@ -1,5 +1,25 @@
 {
+
   "usage": "450,000 / 550,000",
   "boosterLabel": "Booster Plan",
-  "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80"
+  "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80",
+  "plan": {
+    "name": "Pro Growth Plan",
+    "usagePercentage": 82,
+    "creditCopy": "450k of 550k credits used",
+    "renewal": "Renews 01 Sep 2025",
+    "highlights": ["Priority support", "Unlimited grids", "5 workspaces included"]
+  },
+  "user": {
+    "name": "Tim Berg",
+    "email": "tim@bitscale.com",
+    "role": "Growth Lead"
+  },
+  "profileMenu": [
+    "View profile",
+    "Account settings",
+    "Billing",
+    "Keyboard shortcuts",
+    "Sign out"
+  ]
 }

@@ -30,10 +30,14 @@ export function Sidebar() {
   return (
     <aside className={styles.container}>
       <div className={styles.brandWrapper}>
-        <div className={styles.brandMark}>{sidebarData.brand.mark}</div>
-        <div className={styles.brandInfo}>
-          <p className={styles.brandName}>{sidebarData.brand.name}</p>
-        </div>
+        <Image
+          src="/bitscalelogo.svg"
+          alt={sidebarData.brand.name}
+          width={186}
+          height={22}
+          className={styles.brandLogo}
+          priority
+        />
       </div>
 
       <div className={styles.workspaceCard}>
@@ -80,10 +84,14 @@ export function Sidebar() {
       </div>
 
       <div className={styles.supportCard}>
-        <div>
-          <p>{sidebarData.support.title}</p>
-          <p className={styles.supportDescription}>{sidebarData.support.subtitle}</p>
-        </div>
+        <Image
+          src="/bitscalelogo.svg"
+          alt={`${sidebarData.brand.name} logo`}
+          width={186}
+          height={22}
+          className={styles.supportLogo}
+        />
+        <p className={styles.supportDescription}>{sidebarData.support.subtitle}</p>
       </div>
     </aside>
   );
