@@ -14,15 +14,16 @@
 }
 
 .welcomeTitle {
-  font-size: clamp(1.4rem, 2vw, 1.75rem);
+  font-size: 18px;
   font-weight: 600;
   margin: 0;
 }
 
 .welcomeSubtitle {
   margin-top: 0.4rem;
+  font-weight: 400;
   color: var(--gray-500);
-  font-size: 0.95rem;
+  font-size: 14px;
 }
 
 .actions {
@@ -99,10 +100,9 @@
 }
 
 .latestCard {
-  background-color: #f8fafc;
+  background-color: #e7f3f880;
   border-radius: 24px;
   padding: 1.25rem;
-  border: 1px solid rgba(148, 163, 184, 0.3);
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -111,33 +111,20 @@
 
 .latestMedia {
   position: relative;
-  min-width: 160px;
-  border-radius: 18px;
+  width: 143px;
+  height: 97px;
+  border-radius: 12px;
   overflow: hidden;
-  background: linear-gradient(145deg, #dbeafe, #e2e8f0);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #000;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.25);
+  flex-shrink: 0;
 }
 
-.latestImage {
+.videoEmbed {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  opacity: 0.4;
-}
-
-.playButton {
-  position: absolute;
-  width: 38px;
-  height: 38px;
-  border-radius: 999px;
   border: none;
-  background-color: rgba(15, 23, 42, 0.8);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
 }
 
 .mediaDuration {
@@ -158,24 +145,25 @@
 }
 
 .eyebrow {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #4f46e5;
+  font-size: 14px;
+  font-weight: 500;
+  color: #347fa9;
   margin: 0;
 }
 
 .latestTitle {
   margin: 0;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 500;
   color: #0f172a;
 }
 
 .latestDescription {
   margin: 0;
   color: #475467;
+  font-weight: 400;
   line-height: 1.45;
-  font-size: 0.9rem;
+  font-size: 12px;
 }
 
 .latestMeta {
@@ -184,10 +172,9 @@
 }
 
 .progressCard {
-  background-color: #fefefe;
+  background-color: #e7f3f880;
   border-radius: 24px;
   padding: 1.25rem;
-  border: 1px solid rgba(148, 163, 184, 0.3);
   display: flex;
   flex-direction: column;
   gap: 0.9rem;

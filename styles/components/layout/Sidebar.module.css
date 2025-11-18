@@ -58,7 +58,7 @@
 .workspaceCard {
   background-color: var(--color-bg);
   border-radius: 18px;
-  padding: 0.2rem 0.2rem;
+  padding: 0.2rem 1rem ;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -105,6 +105,7 @@
   font-size: 0.75rem;
   font-weight: 500;
   color: var(--gray-500);
+  margin-left: 1rem;
   margin-bottom: 0.5rem;
 }
 
@@ -146,7 +147,7 @@
 .navIcon {
   height: 18px;
   width: 18px;
-  color: inherit;
+  color: var(--color-text);
 }
 
 .active {

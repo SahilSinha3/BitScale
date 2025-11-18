@@ -1,6 +1,3 @@
-import Image from "next/image";
-import { Play } from "lucide-react";
-
 import styles from "@/styles/ui/Dashboard.module.css";
 
 type LatestCardData = {
@@ -11,6 +8,7 @@ type LatestCardData = {
   media: {
     thumbnail: string;
     duration: string;
+    embedUrl?: string;
   };
 };
 
@@ -19,19 +17,21 @@ type LatestCardProps = {
 };
 
 export function LatestCard({ data }: LatestCardProps) {
+  const videoUrl = data.media.embedUrl ?? "https://www.youtube.com/embed/dQw4w9WgXcQ";
+
   return (
     <article className={styles.latestCard}>
       <div className={styles.latestMedia}>
-        <Image
-          src={data.media.thumbnail}
-          alt={data.title}
-          width={160}
-          height={120}
-          className={styles.latestImage}
+        <iframe
+          className={styles.videoEmbed}
+          width={143}
+          height={97}
+          src={videoUrl}
+          title={`Latest tutorial video - ${data.title}`}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
         />
-        <button type="button" className={styles.playButton} aria-label="Play tutorial">
-          <Play size={16} />
-        </button>
         <span className={styles.mediaDuration}>{data.media.duration}</span>
       </div>
       <div className={styles.latestBody}>

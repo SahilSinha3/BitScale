@@ -48,7 +48,6 @@ export function Sidebar() {
           </div>
           <div>
             <p className={styles.workspaceName}>{sidebarData.workspace.name}</p>
-            <p className={styles.workspaceMeta}>{sidebarData.workspace.subtitle}</p>
           </div>
         </div>
         <ChevronsUpDown className={styles.navIcon} />
