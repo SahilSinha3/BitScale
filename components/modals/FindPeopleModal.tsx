@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import {
   Bookmark,
   Briefcase,
@@ -54,35 +53,40 @@ export function FindPeopleModal({ open, onClose }: FindPeopleModalProps) {
     <div className={styles.overlay} role="dialog" aria-modal="true" onClick={onClose}>
       <div className={styles.modal} onClick={(event) => event.stopPropagation()}>
         <header className={styles.headerRow}>
-          <div className={styles.titleGroup}>
-            <h2 className={styles.title}>{data.title}</h2>
-            <button type="button" className={styles.savedSearchButton}>
-              <Bookmark size={14} />
-              {data.savedSearchLabel}
-              <ChevronDown size={14} />
-            </button>
-            <button
-              type="button"
-              className={styles.closeButton}
-              onClick={onClose}
-              aria-label="Close"
-            >
-              <X size={18} />
-            </button>
-          </div>
-          <div className={styles.metaRow}>
-            <p className={styles.helperText}>{data.stats.helper}</p>
-            <div className={styles.metaRight}>
-              <div className={styles.limitBadge}>
-                <Search size={14} />
-                <span>
-                  {data.limit.used.toLocaleString()}/{data.limit.total.toLocaleString()}
-                </span>
+          <div className={styles.headerTop}>
+            <div className={styles.titleColumn}>
+              <div className={styles.titleGroup}>
+                <h2 className={styles.title}>{data.title}</h2>
+                <button type="button" className={styles.savedSearchButton}>
+                  <ChevronDown size={14} />
+                  {data.savedSearchLabel}
+                </button>
               </div>
-              <span className={styles.unlockCopy}>
-                <Lock size={14} />
-                {data.stats.unlockCopy}
-              </span>
+            </div>
+            <div className={styles.metaColumn}>
+              <div className={styles.metaContent}>
+                <div className={styles.limitBadge}>
+                  <Search size={14} />
+                  <span>
+                    {data.limit.used.toLocaleString()}/{data.limit.total.toLocaleString()}
+                  </span>
+                </div>
+                <div className={styles.metaHelperRow}>
+                  <p className={styles.helperText}>{data.stats.helper}</p>
+                  <span className={styles.unlockCopy}>
+                    <Lock size={14} />
+                    {data.stats.unlockCopy}
+                  </span>
+                </div>
+              </div>
+              <button
+                type="button"
+                className={styles.closeButton}
+                onClick={onClose}
+                aria-label="Close"
+              >
+                <X size={18} />
+              </button>
             </div>
           </div>
         </header>
@@ -140,7 +144,7 @@ export function FindPeopleModal({ open, onClose }: FindPeopleModalProps) {
               </div>
             </div>
             <div className={styles.emptyState}>
-              <Image src="/window.svg" alt="Empty state" width={220} height={180} />
+              <div className={styles.loadingSpinner} aria-hidden="true" />
               <p className={styles.emptyTitle}>{data.helperCopy.title}</p>
               <p className={styles.emptySubtitle}>{data.helperCopy.subtitle}</p>
               <p className={styles.emptyOr}>{data.helperCopy.orCopy}</p>
