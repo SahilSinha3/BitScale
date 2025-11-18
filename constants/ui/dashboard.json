@@ -8,33 +8,30 @@
     { "label": "Find People", "variant": "outline" },
     { "label": "New Grid", "variant": "primary", "icon": "Plus" }
   ],
-  "cards": [
-    {
-      "type": "content",
-      "title": "Latest from Bitscale",
-      "heading": "How to Integrate 2 Way HubSpot",
-      "description": "Prerequisites for this Integration is that you should have a Hubspot account and copy the API key. We simple add our API key through the integrations panel.",
-      "meta": "Posted today",
-      "stats": {
-        "label": "Watch tutorial",
-        "duration": "4 min"
-      }
-    },
-    {
-      "type": "progress",
-      "title": "Complete product demo",
-      "subtitle": "92% of users nailed BitScale after this walkthrough",
-      "progress": 75,
-      "items": [
-        "Create your data list",
-        "Connect an integration",
-        "Learn about BitAgent",
-        "Customise waterfall providers"
-      ]
+  "latestCard": {
+    "eyebrow": "Latest from Bitscale",
+    "title": "How to Integrate 2 Way HubSpot",
+    "description": "Prerequisites for this Integration is that you should have a Hubspot account and copy the API key. We simply add our API key through the integrations panel.",
+    "meta": "Posted today",
+    "media": {
+      "thumbnail": "/window.svg",
+      "duration": "04:02"
     }
-  ],
+  },
+  "progressCard": {
+    "title": "Complete product demo",
+    "subtitle": "92% of users nailed BitScale after this walkthrough",
+    "progressLabel": "Overall progress",
+    "progressValue": 75,
+    "steps": [
+      "Create your data list",
+      "Connect an integration",
+      "Learn about BitAgent",
+      "Customise waterfall providers"
+    ]
+  },
   "tabs": [
-    { "label": "My Grids", "key": "my" },
+    { "label": "My Grids", "key": "my", "active": true },
     { "label": "Starred", "key": "starred" }
   ],
   "table": {
