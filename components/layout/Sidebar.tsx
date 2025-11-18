@@ -1,9 +1,8 @@
 import Image from "next/image";
-import { ChevronsUpDown, HeadphonesIcon } from "lucide-react";
+import { ChevronsUpDown } from "lucide-react";
 
 import { NAV_SECTIONS } from "@/constants/navigation";
 import styles from "@/styles/components/layout/Sidebar.module.css";
-import { ThemeSwitch } from "./ThemeSwitch";
 
 export function Sidebar() {
   return (
@@ -12,7 +11,6 @@ export function Sidebar() {
         <div className={styles.brandMark}>B</div>
         <div className={styles.brandInfo}>
           <p className={styles.brandName}>Bitscale</p>
-          <p className={styles.brandTagline}>GTM Super App</p>
         </div>
       </div>
 
@@ -28,14 +26,11 @@ export function Sidebar() {
           </div>
           <div>
             <p className={styles.workspaceName}>GTM Spaces</p>
-            <p className={styles.workspaceMeta}>Workspace</p>
           </div>
         </div>
         <ChevronsUpDown className={styles.navIcon} />
       </div>
-      <div className={styles.themeRow}>
-        <ThemeSwitch />
-      </div>
+    
 
       <div className={styles.sections}>
         {NAV_SECTIONS.map((section) => (
@@ -61,10 +56,9 @@ export function Sidebar() {
       </div>
 
       <div className={styles.supportCard}>
-        <HeadphonesIcon className={styles.navIcon} />
         <div>
-          <p>Get Support</p>
-          <p className={styles.supportDescription}>Reach out to the Bitscale team</p>
+          <p>BitScale</p>
+          <p className={styles.supportDescription}>Get Support at Bitscale </p>
         </div>
       </div>
     </aside>
