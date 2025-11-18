@@ -1,15 +1,26 @@
 #!/usr/bin/env sh
 
-# validation step before pushing 
 echo "🔍 Running pre-push validation..."
 
-# checking for build errors
-echo " Building project..."
-npm run build
+echo "🧹 Linting sources..."
+npm run lint
+if [ $? -ne 0 ]; then
+  echo "❌ Lint failed! Push aborted."
+  exit 1
+fi
 
+echo "🧾 Checking Prettier formatting..."
+npm run format:check
+if [ $? -ne 0 ]; then
+  echo "❌ Formatting check failed! Push aborted."
+  exit 1
+fi
+
+echo "📦 Building project..."
+npm run build
 if [ $? -ne 0 ]; then
   echo "❌ Build failed! Push aborted."
   exit 1
 fi
 
-echo " Build successful! Proceeding with push..."
+echo "✅ All checks passed. Proceeding with push..."

@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Lato } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const lato = Lato({
+  variable: "--font-lato",
+  weight: ["400", "700"],
   subsets: ["latin"],
   display: "swap",
 });
@@ -20,11 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} bg-[var(--color-bg)] text-[var(--color-text)] antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${inter.variable} ${lato.variable} antialiased`}>{children}</body>
     </html>
   );
 }

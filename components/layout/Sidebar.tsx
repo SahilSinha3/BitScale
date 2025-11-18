@@ -1,12 +1,14 @@
-import { ChevronDown, HeadphonesIcon } from "lucide-react";
+import Image from "next/image";
+import { ChevronsUpDown, HeadphonesIcon } from "lucide-react";
 
 import { NAV_SECTIONS } from "@/constants/navigation";
 import styles from "@/styles/components/layout/Sidebar.module.css";
+import { ThemeSwitch } from "./ThemeSwitch";
 
 export function Sidebar() {
   return (
     <aside className={styles.container}>
-      <div className={styles.brand}>
+      <div className={styles.brandWrapper}>
         <div className={styles.brandMark}>B</div>
         <div className={styles.brandInfo}>
           <p className={styles.brandName}>Bitscale</p>
@@ -16,13 +18,23 @@ export function Sidebar() {
 
       <div className={styles.workspaceCard}>
         <div className={styles.workspaceInfo}>
-          <div className={styles.workspaceAvatar}>GT</div>
+          <div className={styles.workspaceAvatar}>
+            <Image
+              src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?auto=format&fit=crop&w=80&q=80"
+              alt="Workspace avatar"
+              width={36}
+              height={36}
+            />
+          </div>
           <div>
             <p className={styles.workspaceName}>GTM Spaces</p>
             <p className={styles.workspaceMeta}>Workspace</p>
           </div>
         </div>
-        <ChevronDown className={`${styles.navIcon} ${styles.chevron}`} />
+        <ChevronsUpDown className={styles.navIcon} />
+      </div>
+      <div className={styles.themeRow}>
+        <ThemeSwitch />
       </div>
 
       <div className={styles.sections}>
