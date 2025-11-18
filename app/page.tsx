@@ -1,3 +1,5 @@
+import type { ComponentProps } from "react";
+
 import { ActionButtons } from "@/components/dashboard/ActionButtons";
 import { GridTable } from "@/components/dashboard/GridTable";
 import { LatestCard } from "@/components/dashboard/LatestCard";
@@ -7,7 +9,14 @@ import { PageSkeleton } from "@/components/layout/PageSkeleton";
 import dashboardData from "@/constants/ui/dashboard.json";
 import styles from "@/styles/ui/Dashboard.module.css";
 
-const activeTabKey = dashboardData.tabs.find((tab) => tab.active)?.key ?? dashboardData.tabs[0]?.key;
+const activeTabKey =
+  dashboardData.tabs.find((tab) => tab.active)?.key ?? dashboardData.tabs[0]?.key;
+
+const normalizedActionButtons: ComponentProps<typeof ActionButtons>["buttons"] =
+  dashboardData.actionButtons.map((button) => ({
+    ...button,
+    variant: button.variant === "primary" ? "primary" : "outline",
+  }));
 
 export default function Home() {
   return (
@@ -18,7 +27,7 @@ export default function Home() {
             <p className={styles.welcomeTitle}>{dashboardData.welcome.title}</p>
             <p className={styles.welcomeSubtitle}>{dashboardData.welcome.subtitle}</p>
           </div>
-          <ActionButtons buttons={dashboardData.actionButtons} />
+          <ActionButtons buttons={normalizedActionButtons} />
         </div>
 
         <div className={styles.cardsRow}>
