@@ -308,7 +308,6 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
   padding-bottom: 0.75rem;
 }
 
@@ -336,7 +335,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -0.6rem;
+  bottom: -0.5rem;
   height: 2px;
   background-color: var(--blue-700);
   border-radius: 999px;
@@ -380,7 +379,6 @@
   padding: 0.75rem 1.5rem;
   font-weight: 500;
   color: rgba(107, 114, 128, 1);
-  background-color: rgba(248, 250, 252, 0.95);
   font-size: 12px;
   letter-spacing: 0.05em;
 }
@@ -392,8 +390,12 @@
   font-weight: 400;
 }
 
+.table tbody  {
+  background-color: rgba(249, 250, 251, 0.9);
+}
+
 .actionsCell {
-  text-align: right;
+  text-align: center;
 }
 
 .actionsCell button {
@@ -402,7 +404,8 @@
   color: #94a3b8;
   display: inline-flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+  width: 100%;
 }
 
 .nameCell {

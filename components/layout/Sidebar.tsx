@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 
 import sidebarData from "@/constants/components/sidebar.json";
+import supportPopover from "@/constants/components/supportPopover.json";
 import styles from "@/styles/components/layout/Sidebar.module.css";
 
 const iconComponents = {
@@ -52,6 +53,7 @@ export function Sidebar() {
           </div>
           <div>
             <p className={styles.workspaceName}>{sidebarData.workspace.name}</p>
+            <p className={styles.workspaceSubtitle}>{sidebarData.workspace.subtitle}</p>
           </div>
         </div>
         <ChevronsUpDown className={styles.navIcon} />
@@ -74,6 +76,11 @@ export function Sidebar() {
                       <Icon className={styles.navIcon} />
                       {item.label}
                     </span>
+                    {item.label === "Playbooks" ? (
+                      <span className={styles.playbookRightIcon}>
+                        <Rocket size={16} />
+                      </span>
+                    ) : null}
                     {item.badge && <span className={styles.badge}>{item.badge}</span>}
                   </button>
                 );
@@ -84,14 +91,31 @@ export function Sidebar() {
       </div>
 
       <div className={styles.supportCard}>
-        <Image
-          src="/bitscalelogo.svg"
-          alt={`${sidebarData.brand.name} logo`}
-          width={186}
-          height={22}
-          className={styles.supportLogo}
-        />
-        <p className={styles.supportDescription}>{sidebarData.support.subtitle}</p>
+        <div className={styles.supportContent}>
+          <Image
+            src="/bitscalelogo.svg"
+            alt={`${sidebarData.brand.name} logo`}
+            width={140}
+            height={22}
+            className={styles.supportLogo}
+          />
+          <div className={styles.supportTextBlock}>
+            <p className={styles.supportDescription}>{sidebarData.support.subtitle}</p>
+            <span className={styles.supportArrow}>→</span>
+          </div>
+        </div>
+        <div className={styles.supportPopover}>
+          <p className={styles.supportPopoverTitle}>{supportPopover.title}</p>
+          <p className={styles.supportPopoverSubtitle}>{supportPopover.subtitle}</p>
+          <ul>
+            {supportPopover.options.map((option) => (
+              <li key={option.label}>
+                <p className={styles.supportOptionLabel}>{option.label}</p>
+                <p className={styles.supportOptionDescription}>{option.description}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </aside>
   );

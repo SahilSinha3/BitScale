@@ -1,0 +1,9 @@
+{
+  "title": "Need a hand?",
+  "subtitle": "Quick links",
+  "options": [
+    { "label": "Product Docs", "description": "Browse the latest BitScale guides" },
+    { "label": "Contact Support", "description": "Reach the GTM Spaces success team" },
+    { "label": "Join Community", "description": "Chat with other power users" }
+  ]
+}

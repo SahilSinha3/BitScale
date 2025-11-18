@@ -77,7 +77,7 @@ export function GridTable({ rows }: GridTableProps) {
                     {row.starred ? (
                       <Star className={styles.rowStar} size={14} color="#facc15" fill="#facc15" />
                     ) : (
-                      <span className={styles.rowStarPlaceholder} />
+                      <Star className={`${styles.rowStar} ${styles.rowStarInactive}`} size={14} />
                     )}
                     <div className={styles.iconPill}>
                       <Icon size={16} />
