@@ -2,17 +2,17 @@
 
 echo "🔍 Running pre-push validation..."
 
-echo "🧹 Linting sources..."
-npm run lint
-if [ $? -ne 0 ]; then
-  echo "❌ Lint failed! Push aborted."
-  exit 1
-fi
-
 echo "🧾 Checking Prettier formatting..."
 npm run format:check
 if [ $? -ne 0 ]; then
   echo "❌ Formatting check failed! Push aborted."
+  exit 1
+fi
+
+echo "🧹 Linting sources..."
+npm run lint
+if [ $? -ne 0 ]; then
+  echo "❌ Lint failed! Push aborted."
   exit 1
 fi
 

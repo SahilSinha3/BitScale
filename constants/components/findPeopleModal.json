@@ -14,7 +14,11 @@
     { "label": "People Keyword", "placeholder": "Enter single keyword here...", "icon": "Search" },
     { "label": "Job Title", "placeholder": "E.g: Manager, Software Engineer", "icon": "Briefcase" },
     { "label": "Company Website", "placeholder": "Eg: Google.com, LinkedIn.com", "icon": "Globe" },
-    { "label": "Person Location", "placeholder": "Eg: London, Great New York City", "icon": "MapPin" },
+    {
+      "label": "Person Location",
+      "placeholder": "Eg: London, Great New York City",
+      "icon": "MapPin"
+    },
     { "label": "Company Location", "placeholder": "E.g: United States, UAE", "icon": "Building" },
     { "label": "Company Headcount", "placeholder": "E.g: 11-50 , 10000+", "icon": "Users" },
     { "label": "Management Level", "placeholder": "E.g: Owner, Founder", "icon": "UserCircle" }

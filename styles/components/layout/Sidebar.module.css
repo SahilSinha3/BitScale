@@ -155,7 +155,6 @@
   color: var(--gray-500);
 }
 
-
 .sectionTitle {
   text-transform: uppercase;
   font-size: 12px;
@@ -191,7 +190,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    color 0.2s ease;
 }
 
 .navButtonContent {
@@ -296,7 +298,9 @@
   opacity: 0;
   pointer-events: none;
   transform: translateY(5px);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 .supportCard:hover .supportPopover {

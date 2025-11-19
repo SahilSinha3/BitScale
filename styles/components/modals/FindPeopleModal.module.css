@@ -256,7 +256,7 @@
   color: #fff;
 }
 
- .resultsColumn {
+.resultsColumn {
   border: 1px solid rgba(15, 23, 42, 0.08);
   border-radius: 8px;
   display: flex;

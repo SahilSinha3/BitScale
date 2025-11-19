@@ -48,13 +48,15 @@
   color: #f8fafc;
   background-color: var(--gray-800);
   font-family: var(--font-inter);
-  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 
 .actionButton:hover {
   transform: translateY(-1px);
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.2);
-
 }
 
 .outline {
@@ -194,7 +196,9 @@
   height: 8px;
   border-radius: 999px;
   background-color: rgba(31, 85, 145, 0.3);
-  transition: width 0.25s ease, background-color 0.25s ease;
+  transition:
+    width 0.25s ease,
+    background-color 0.25s ease;
 }
 
 .carouselDotActive {
@@ -390,7 +394,7 @@
   font-weight: 400;
 }
 
-.table tbody  {
+.table tbody {
   background-color: rgba(249, 250, 251, 0.9);
 }
 

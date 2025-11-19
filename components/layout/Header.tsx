@@ -33,9 +33,7 @@ export function Header() {
                 <Gauge className={styles.quotaIcon} aria-hidden="true" />
                 {usage}
               </span>
-              <button className={styles.boosterButton}>
-                {boosterLabel}
-              </button>
+              <button className={styles.boosterButton}>{boosterLabel}</button>
             </div>
             {plan ? (
               <div className={styles.planPopover} role="status">
