@@ -7,6 +7,7 @@
   padding: 0 1.5rem;
   border-bottom: 1px solid rgba(15, 23, 42, 0.08);
   background-color: var(--color-bg);
+
   min-height: var(--header-height);
 }
 
