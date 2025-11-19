@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { UserRound } from "lucide-react";
+import { Gauge, UserRound } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 import headerData from "@/constants/components/header.json";
@@ -29,8 +29,13 @@ export function Header() {
         <div className={styles.info}>
           <div className={styles.quotaWrapper}>
             <div className={styles.quotaPill}>
-              <span className={styles.quotaValue}>{usage}</span>
-              <button className={styles.boosterButton}>{boosterLabel}</button>
+              <span className={styles.quotaValue}>
+                <Gauge className={styles.quotaIcon} aria-hidden="true" />
+                {usage}
+              </span>
+              <button className={styles.boosterButton}>
+                {boosterLabel}
+              </button>
             </div>
             {plan ? (
               <div className={styles.planPopover} role="status">

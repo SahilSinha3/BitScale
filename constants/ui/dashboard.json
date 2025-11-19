@@ -4,8 +4,8 @@
     "subtitle": "Here's your daily scoop on Bitscale!"
   },
   "actionButtons": [
-    { "label": "Find Companies", "variant": "outline" },
-    { "label": "Find People", "variant": "outline" },
+    { "label": "Find Companies", "variant": "outline", "icon": "Building2" },
+    { "label": "Find People", "variant": "outline", "icon": "Users" },
     { "label": "New Grid", "variant": "primary", "icon": "Plus" }
   ],
   "latestCard": {

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Plus } from "lucide-react";
+import { Building2, Plus, Users } from "lucide-react";
 
 import { FindPeopleModal } from "@/components/modals/FindPeopleModal";
 import styles from "@/styles/ui/Dashboard.module.css";
@@ -13,6 +13,8 @@ type ActionButton = {
 };
 
 const iconMap = {
+  Building2,
+  Users,
   Plus,
 };
 
