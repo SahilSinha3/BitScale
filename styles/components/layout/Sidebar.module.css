@@ -2,11 +2,9 @@
   display: flex;
   flex-direction: column;
   width: 100%;
- 
   border-bottom: 1px solid rgba(15, 23, 42, 0.08);
   background-color: var(--color-bg);
   min-height: 100vh;
-  gap: 1.25rem;
 }
 
 @media (min-width: 768px) {
@@ -64,13 +62,14 @@
 
 .workspaceCard {
   background-color: var(--color-bg);
-  border-radius: 18px;
   padding: 0.4rem 1rem 0.6rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: #f9fafb;
   border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  position: relative;
+  cursor: pointer;
 }
 
 .workspaceInfo {
@@ -103,24 +102,66 @@
   font-size: 0.8rem;
 }
 
-.workspaceSubtitle {
-  margin: 0.15rem 0 0;
-  font-size: 0.7rem;
+.workspacePopover {
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  left: 0;
+  width: 240px;
+  padding: 0.85rem;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background-color: #fff;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+  z-index: 10;
+}
+
+.workspacePopoverTitle {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.workspacePopover ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.workspacePopoverRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.workspacePopoverRow img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.workspacePopoverName {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.workspacePopoverMeta {
+  margin: 0.08rem 0 0;
+  font-size: 0.72rem;
   color: var(--gray-500);
 }
 
-.workspaceSubtitle {
-  font-size: 0.7rem;
-  color: var(--gray-500);
-  margin: 0.1rem 0 0;
-}
 
 .sectionTitle {
   text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: 12px;
   font-weight: 500;
   color: var(--gray-500);
-  margin-left: 1rem;
+  margin-left: 0.75rem;
   margin-bottom: 0.5rem;
 }
 
@@ -143,7 +184,7 @@
 .navButton {
   width: 100%;
   padding: 0.65rem 0.85rem;
-  font-size: 0.9rem;
+  font-size: 14px;
   font-weight: 400;
   color: var(--gray-800);
   background-color: #ffffff;
@@ -297,33 +338,4 @@
   margin: 0;
   font-size: 0.75rem;
   color: var(--gray-500);
-}
-
-@media (prefers-color-scheme: dark) {
-  .brandWrapper,
-  .container {
-    border-color: rgba(255, 255, 255, 0.12);
-  }
-
-  .navButton {
-    background-color: rgba(15, 23, 42, 0.55);
-    color: rgba(255, 255, 255, 0.85);
-    border-color: rgba(255, 255, 255, 0.08);
-  }
-
-  .navButton:not(.active):hover {
-    background-color: rgba(15, 23, 42, 0.7);
-  }
-
-  .active {
-    border-color: rgba(59, 130, 246, 0.45);
-  }
-
-  .badge {
-    background-color: rgba(255, 255, 255, 0.25);
-  }
-
-  .supportCard {
-    border-color: rgba(255, 255, 255, 0.15);
-  }
 }

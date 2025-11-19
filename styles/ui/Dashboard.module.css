@@ -495,39 +495,3 @@
 .expandIcon {
   color: rgba(15, 23, 42, 0.5);
 }
-
-@media (prefers-color-scheme: dark) {
-  .latestCard,
-  .progressCard,
-  .tableWrapper,
-  .searchBar {
-    background-color: rgba(15, 23, 42, 0.5);
-    border-color: rgba(255, 255, 255, 0.1);
-  }
-
-  .latestTitle,
-  .progressTitle,
-  .rowTitle,
-  .nameCell {
-    color: #f8fafc;
-  }
-
-  .latestDescription,
-  .progressSubtitle,
-  .welcomeSubtitle {
-    color: #cbd5f5;
-  }
-
-  .table th {
-    background-color: rgba(15, 23, 42, 0.7);
-  }
-
-  .table td {
-    border-color: rgba(255, 255, 255, 0.08);
-  }
-
-  .searchInput {
-    color: #f8fafc;
-  }
-
-}

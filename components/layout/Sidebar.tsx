@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import {
   BookOpenCheck,
@@ -7,6 +9,8 @@ import {
   Rocket,
   Settings,
 } from "lucide-react";
+import type { KeyboardEvent } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import sidebarData from "@/constants/components/sidebar.json";
 import supportPopover from "@/constants/components/supportPopover.json";
@@ -28,6 +32,30 @@ function getIcon(name: string) {
 }
 
 export function Sidebar() {
+  const [workspaceOpen, setWorkspaceOpen] = useState(false);
+  const workspaceRef = useRef<HTMLDivElement>(null);
+
+  const toggleWorkspace = () => {
+    setWorkspaceOpen((prev) => !prev);
+  };
+
+  const handleWorkspaceKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      toggleWorkspace();
+    }
+  };
+
+  useEffect(() => {
+    const handleClick = (event: MouseEvent) => {
+      if (workspaceRef.current && !workspaceRef.current.contains(event.target as Node)) {
+        setWorkspaceOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, []);
+
   return (
     <aside className={styles.container}>
       <div className={styles.brandWrapper}>
@@ -41,7 +69,16 @@ export function Sidebar() {
         />
       </div>
 
-      <div className={styles.workspaceCard}>
+      <div
+        className={styles.workspaceCard}
+        onClick={toggleWorkspace}
+        onKeyDown={handleWorkspaceKeyDown}
+        ref={workspaceRef}
+        role="button"
+        aria-haspopup="menu"
+        aria-expanded={workspaceOpen}
+        tabIndex={0}
+      >
         <div className={styles.workspaceInfo}>
           <div className={styles.workspaceAvatar}>
             <Image
@@ -53,10 +90,27 @@ export function Sidebar() {
           </div>
           <div>
             <p className={styles.workspaceName}>{sidebarData.workspace.name}</p>
-            <p className={styles.workspaceSubtitle}>{sidebarData.workspace.subtitle}</p>
           </div>
         </div>
         <ChevronsUpDown className={styles.navIcon} />
+        {workspaceOpen ? (
+          <div className={styles.workspacePopover}>
+            <p className={styles.workspacePopoverTitle}>Switch workspace</p>
+            <ul>
+              {(sidebarData.workspaceOptions ?? []).map((workspace) => (
+                <li key={workspace.name}>
+                  <div className={styles.workspacePopoverRow}>
+                    <Image src={workspace.logo} alt={workspace.name} width={28} height={28} />
+                    <div>
+                      <p className={styles.workspacePopoverName}>{workspace.name}</p>
+                      <p className={styles.workspacePopoverMeta}>{workspace.subtitle}</p>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
       </div>
 
       <div className={styles.sections}>

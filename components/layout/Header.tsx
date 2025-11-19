@@ -4,7 +4,6 @@ import Image from "next/image";
 import { UserRound } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-import { ThemeSwitch } from "./ThemeSwitch";
 import headerData from "@/constants/components/header.json";
 import styles from "@/styles/components/layout/Header.module.css";
 
@@ -58,7 +57,6 @@ export function Header() {
             ) : null}
           </div>
         </div>
-        <ThemeSwitch />
         <div className={styles.profileMenuWrapper} ref={menuRef}>
           <button
             type="button"
